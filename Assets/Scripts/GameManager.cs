@@ -38,7 +38,7 @@ namespace RunnerGame
         {
             currentLevel = GetLevel();
             SetLevel();
-            StopGame();
+            StartGame();
         }
         private void SetLevel()
         {
@@ -62,7 +62,7 @@ namespace RunnerGame
         public void StartGame()
         {
             gameOver = false;
-            joyStickPanel.SetActive(true);
+            //joyStickPanel.SetActive(true);
         }
         public void StopGame()
         {
@@ -71,7 +71,7 @@ namespace RunnerGame
         public void OpenLosePanel()
         {
             losePanel.SetActive(true);
-            joyStickPanel.SetActive(false);
+            //joyStickPanel.SetActive(false);
         }
         public void OpenWinPanel()
         {
