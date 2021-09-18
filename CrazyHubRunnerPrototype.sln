@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToonyColorsPro2.Demo", "Too
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeanCommon", "LeanCommon.csproj", "{592EBADB-0EAF-5204-F547-92DB293C9914}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{94762CFB-2DA3-02F9-FBD5-1429FAED56EF}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEditor.TestRunner", "UnityEditor.TestRunner.csproj", "{9DC3F9AC-7700-0F9B-62C5-BC0744DB3E67}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TextMeshPro.Editor", "Unity.TextMeshPro.Editor.csproj", "{5DDE3F7F-8C7A-AABC-21B6-0E18F06B11C9}"
@@ -75,6 +77,10 @@ Global
 		{592EBADB-0EAF-5204-F547-92DB293C9914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{592EBADB-0EAF-5204-F547-92DB293C9914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{592EBADB-0EAF-5204-F547-92DB293C9914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94762CFB-2DA3-02F9-FBD5-1429FAED56EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94762CFB-2DA3-02F9-FBD5-1429FAED56EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94762CFB-2DA3-02F9-FBD5-1429FAED56EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94762CFB-2DA3-02F9-FBD5-1429FAED56EF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9DC3F9AC-7700-0F9B-62C5-BC0744DB3E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9DC3F9AC-7700-0F9B-62C5-BC0744DB3E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DC3F9AC-7700-0F9B-62C5-BC0744DB3E67}.Release|Any CPU.ActiveCfg = Release|Any CPU

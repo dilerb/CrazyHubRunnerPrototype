@@ -16,6 +16,7 @@ namespace RunnerGame
         private bool drive = false;
         private float _swipeSpeed = 0f;
         private float _nextSpeed = 0f;
+        internal bool _reverseControl = false;
 
         void Start()
         {
@@ -47,7 +48,15 @@ namespace RunnerGame
         private void Swipe()
         {
             _swipeSpeed = Mathf.Lerp(_swipeSpeed, _nextSpeed, _swipeLerpSpeed * Time.deltaTime);
-            transform.Translate(Vector3.right * _swipeSpeed * _strafeSpeed * Time.deltaTime);
+
+            if (_reverseControl)
+            {
+                transform.Translate(Vector3.left * _swipeSpeed * _strafeSpeed * Time.deltaTime);
+            }
+            else
+            {
+                transform.Translate(Vector3.right * _swipeSpeed * _strafeSpeed * Time.deltaTime);
+            }
         }
 
         private void ClampPosition()
