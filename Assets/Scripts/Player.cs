@@ -7,9 +7,11 @@ namespace RunnerGame
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField] Animator _animator;
+        [SerializeField] internal Animator _animator;
+        [SerializeField] private GameObject _pingpongBall;
 
         private PlayerMovement _playerMovement;
+        internal int _correctHit = 0;
         void Start()
         {
             _playerMovement = GetComponent<PlayerMovement>();
@@ -39,6 +41,15 @@ namespace RunnerGame
 
                 GameManager.Instance.StopGame();
                 GameManager.Instance.OpenLosePanel();
+            }
+            else if (c.CompareTag("Finish"))
+            {
+                //_pingpongBall.AddComponent<Rigidbody>();
+                //_pingpongBall.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+
+                _animator.Play("Idle");
+
+                GameManager.Instance.StopGame();
             }
         }
 

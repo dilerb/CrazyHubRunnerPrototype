@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4143267078588982394, guid: 197335f3bbf7fd44db6bcf9f0ea0310e, type: 3}
       propertyPath: _moveSpeed
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4143267078588982394, guid: 197335f3bbf7fd44db6bcf9f0ea0310e, type: 3}
       propertyPath: _rotateSpeed
@@ -553,7 +553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4143267078588982394, guid: 197335f3bbf7fd44db6bcf9f0ea0310e, type: 3}
       propertyPath: _moveSpeed
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4143267078588982394, guid: 197335f3bbf7fd44db6bcf9f0ea0310e, type: 3}
       propertyPath: _rotateSpeed
@@ -669,9 +669,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 129903098}
+  - component: {fileID: 129903099}
+  - component: {fileID: 129903100}
+  - component: {fileID: 129903101}
   m_Layer: 0
   m_Name: BallSlot1 (2)
-  m_TagString: Untagged
+  m_TagString: PingPongCup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -691,6 +694,49 @@ Transform:
   m_Father: {fileID: 2123548722}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &129903099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129903097}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &129903100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129903097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee9694398012946b90ecd40a57057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pingpong: {fileID: 1844579062}
+  _player: {fileID: 268226371}
+--- !u!54 &129903101
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129903097}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &153160227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5dd43bf866c70084a8edf58e0d25efab, type: 3}
@@ -764,9 +810,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 204968873}
+  - component: {fileID: 204968874}
+  - component: {fileID: 204968875}
+  - component: {fileID: 204968876}
   m_Layer: 0
   m_Name: BallSlot1 (4)
-  m_TagString: Untagged
+  m_TagString: PingPongCup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -786,6 +835,93 @@ Transform:
   m_Father: {fileID: 2123548722}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &204968874
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204968872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &204968875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204968872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee9694398012946b90ecd40a57057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pingpong: {fileID: 1844579062}
+  _player: {fileID: 268226371}
+--- !u!54 &204968876
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204968872}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!1 &247143514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247143515}
+  - component: {fileID: 247143516}
+  m_Layer: 0
+  m_Name: FinishPoint
+  m_TagString: Finish
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &247143515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247143514}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 417.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1723288841}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &247143516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247143514}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.903824, y: 1.6, z: 1.872406}
+  m_Center: {x: -0.05978775, y: 0.85, z: 0.3712616}
 --- !u!1 &268226371
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,9 +1011,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 268654996}
+  - component: {fileID: 268654997}
+  - component: {fileID: 268654998}
+  - component: {fileID: 268654999}
   m_Layer: 0
   m_Name: BallSlot1 (9)
-  m_TagString: Untagged
+  m_TagString: PingPongCup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -897,6 +1036,49 @@ Transform:
   m_Father: {fileID: 2123548722}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &268654997
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268654995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &268654998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268654995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee9694398012946b90ecd40a57057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pingpong: {fileID: 1844579062}
+  _player: {fileID: 268226371}
+--- !u!54 &268654999
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268654995}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &281613946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1126,9 +1308,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 307691052}
+  - component: {fileID: 307691053}
+  - component: {fileID: 307691054}
+  - component: {fileID: 307691055}
   m_Layer: 0
   m_Name: BallSlot1 (8)
-  m_TagString: Untagged
+  m_TagString: PingPongCup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1148,6 +1333,49 @@ Transform:
   m_Father: {fileID: 2123548722}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &307691053
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307691051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &307691054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307691051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee9694398012946b90ecd40a57057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pingpong: {fileID: 1844579062}
+  _player: {fileID: 268226371}
+--- !u!54 &307691055
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307691051}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &338984516 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2586499813791583880, guid: 197335f3bbf7fd44db6bcf9f0ea0310e, type: 3}
@@ -1353,7 +1581,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 838b6b7534784bd408a057de56bffe44, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 838b6b7534784bd408a057de56bffe44, type: 3}
       propertyPath: m_LocalScale.x
@@ -1696,9 +1924,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 542436736}
+  - component: {fileID: 542436737}
+  - component: {fileID: 542436738}
+  - component: {fileID: 542436739}
   m_Layer: 0
   m_Name: BallSlot1 (1)
-  m_TagString: Untagged
+  m_TagString: PingPongCup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1718,6 +1949,49 @@ Transform:
   m_Father: {fileID: 2123548722}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &542436737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542436735}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &542436738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542436735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee9694398012946b90ecd40a57057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pingpong: {fileID: 1844579062}
+  _player: {fileID: 268226371}
+--- !u!54 &542436739
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542436735}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &554035846
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,11 +2350,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667782485}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 429.07}
-  m_LocalScale: {x: 15, y: 0.1, z: 15}
+  m_LocalPosition: {x: 0, y: 0, z: 432.07}
+  m_LocalScale: {x: 15, y: 0.001, z: 15}
   m_Children: []
   m_Father: {fileID: 1723288841}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &667782487
 MeshRenderer:
@@ -2409,7 +2683,7 @@ Transform:
   - {fileID: 1974169874}
   - {fileID: 871005147}
   m_Father: {fileID: 1723288841}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -2630,9 +2904,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 768242291}
+  - component: {fileID: 768242292}
+  - component: {fileID: 768242293}
+  - component: {fileID: 768242294}
   m_Layer: 0
   m_Name: BallSlot1 (5)
-  m_TagString: Untagged
+  m_TagString: PingPongCup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2652,6 +2929,49 @@ Transform:
   m_Father: {fileID: 2123548722}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &768242292
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768242290}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &768242293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768242290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee9694398012946b90ecd40a57057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pingpong: {fileID: 1844579062}
+  _player: {fileID: 268226371}
+--- !u!54 &768242294
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768242290}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &815401884
 GameObject:
   m_ObjectHideFlags: 0
@@ -2958,9 +3278,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 857871232}
+  - component: {fileID: 857871233}
+  - component: {fileID: 857871234}
+  - component: {fileID: 857871235}
   m_Layer: 0
   m_Name: BallSlot1
-  m_TagString: Untagged
+  m_TagString: PingPongCup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2980,6 +3303,49 @@ Transform:
   m_Father: {fileID: 2123548722}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &857871233
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857871231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &857871234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857871231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee9694398012946b90ecd40a57057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pingpong: {fileID: 1844579062}
+  _player: {fileID: 268226371}
+--- !u!54 &857871235
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857871231}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &871005146
 GameObject:
   m_ObjectHideFlags: 0
@@ -3813,7 +4179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4143267078588982394, guid: 197335f3bbf7fd44db6bcf9f0ea0310e, type: 3}
       propertyPath: _moveSpeed
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4143267078588982394, guid: 197335f3bbf7fd44db6bcf9f0ea0310e, type: 3}
       propertyPath: _rotateSpeed
@@ -4188,8 +4554,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -49, y: 490.3}
-  m_SizeDelta: {x: 97.82712, y: -980.65594}
+  m_AnchoredPosition: {x: -38.054047, y: 504.57532}
+  m_SizeDelta: {x: 75.93524, y: -1009.2066}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1095596657
 MonoBehaviour:
@@ -4217,7 +4583,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 127
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -4724,7 +5090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4143267078588982394, guid: 197335f3bbf7fd44db6bcf9f0ea0310e, type: 3}
       propertyPath: _moveSpeed
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4143267078588982394, guid: 197335f3bbf7fd44db6bcf9f0ea0310e, type: 3}
       propertyPath: _rotateSpeed
@@ -5594,7 +5960,7 @@ Transform:
   - {fileID: 30720698}
   - {fileID: 101669030}
   m_Father: {fileID: 1723288841}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1267279340
 GameObject:
@@ -6161,9 +6527,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1376963093}
+  - component: {fileID: 1376963094}
+  - component: {fileID: 1376963095}
+  - component: {fileID: 1376963096}
   m_Layer: 0
   m_Name: BallSlot1 (3)
-  m_TagString: Untagged
+  m_TagString: PingPongCup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6183,6 +6552,49 @@ Transform:
   m_Father: {fileID: 2123548722}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1376963094
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376963092}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1376963095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376963092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee9694398012946b90ecd40a57057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pingpong: {fileID: 1844579062}
+  _player: {fileID: 268226371}
+--- !u!54 &1376963096
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376963092}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1378999334
 GameObject:
   m_ObjectHideFlags: 0
@@ -6323,7 +6735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4143267078588982394, guid: 197335f3bbf7fd44db6bcf9f0ea0310e, type: 3}
       propertyPath: _moveSpeed
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4143267078588982394, guid: 197335f3bbf7fd44db6bcf9f0ea0310e, type: 3}
       propertyPath: _rotateSpeed
@@ -6554,9 +6966,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1489343189}
+  - component: {fileID: 1489343190}
+  - component: {fileID: 1489343191}
+  - component: {fileID: 1489343192}
   m_Layer: 0
   m_Name: BallSlot1 (6)
-  m_TagString: Untagged
+  m_TagString: PingPongCup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6576,6 +6991,49 @@ Transform:
   m_Father: {fileID: 2123548722}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1489343190
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489343188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1489343191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489343188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee9694398012946b90ecd40a57057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pingpong: {fileID: 1844579062}
+  _player: {fileID: 268226371}
+--- !u!54 &1489343192
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489343188}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1510439661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7612751758230521104, guid: f743ccfd21feb2449b0c2992cd71e5a8, type: 3}
@@ -7586,9 +8044,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1638310023}
+  - component: {fileID: 1638310024}
+  - component: {fileID: 1638310025}
+  - component: {fileID: 1638310026}
   m_Layer: 0
   m_Name: BallSlot1 (7)
-  m_TagString: Untagged
+  m_TagString: PingPongCup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7608,6 +8069,49 @@ Transform:
   m_Father: {fileID: 2123548722}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1638310024
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638310022}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1638310025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638310022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee9694398012946b90ecd40a57057c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pingpong: {fileID: 1844579062}
+  _player: {fileID: 268226371}
+--- !u!54 &1638310026
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638310022}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1659304551
 GameObject:
   m_ObjectHideFlags: 0
@@ -8066,6 +8570,7 @@ Transform:
   - {fileID: 356887327}
   - {fileID: 1632253208}
   - {fileID: 514883338}
+  - {fileID: 247143515}
   - {fileID: 667782486}
   - {fileID: 2123548722}
   - {fileID: 702833581}
@@ -8365,16 +8870,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1844579063}
+  - component: {fileID: 1844579067}
   - component: {fileID: 1844579066}
   - component: {fileID: 1844579065}
   - component: {fileID: 1844579064}
   m_Layer: 0
   m_Name: PingPongBall
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1844579063
 Transform:
   m_ObjectHideFlags: 0
@@ -8383,7 +8889,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844579062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3.2, z: 0.82}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 268226372}
@@ -8451,6 +8957,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844579062}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1844579067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844579062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f886d6b34aa0d464ca72cfa6336c764f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 268226371}
 --- !u!1001 &1845943704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9963,7 +10482,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123548721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.59, z: 426.25}
+  m_LocalPosition: {x: 0, y: 0.59, z: 429.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 857871232}
@@ -9978,7 +10497,7 @@ Transform:
   - {fileID: 268654996}
   - {fileID: 1252720364}
   m_Father: {fileID: 1723288841}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2124611232
 PrefabInstance:

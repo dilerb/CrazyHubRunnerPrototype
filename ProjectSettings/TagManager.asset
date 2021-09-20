@@ -8,6 +8,9 @@ TagManager:
   - Beer
   - Saw
   - LosePoint
+  - Slide
+  - Wall
+  - PingPongCup
   layers:
   - Default
   - TransparentFX
