@@ -1002,6 +1002,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 1690294381}
+  _pingpongBall: {fileID: 1844579062}
 --- !u!1 &268654995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3071,6 +3072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: beerpongcups3
       objectReference: {fileID: 0}
+    - target: {fileID: 1348853086083086740, guid: 659258152fe54404a8a69cee8092d473, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 03c3b690341f5764ba2f7ed7372467bb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 659258152fe54404a8a69cee8092d473, type: 3}
 --- !u!1 &830894178
@@ -8399,8 +8404,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.77752227, y: 1.7013211, z: 0.9787887}
-  m_Center: {x: 0.0044391453, y: 0.83506143, z: 0.1098111}
+  m_Size: {x: 0.77752227, y: 1.701321, z: 0.7561862}
+  m_Center: {x: 0.004439133, y: 0.8350614, z: -0.0014902265}
 --- !u!1001 &1711868286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8874,6 +8879,7 @@ GameObject:
   - component: {fileID: 1844579066}
   - component: {fileID: 1844579065}
   - component: {fileID: 1844579064}
+  - component: {fileID: 1844579068}
   m_Layer: 0
   m_Name: PingPongBall
   m_TagString: Untagged
@@ -8889,7 +8895,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844579062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.2, z: 0.82}
+  m_LocalPosition: {x: 0, y: 2.99, z: 1.57}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 268226372}
@@ -8970,6 +8976,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 268226371}
+--- !u!54 &1844579068
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844579062}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1845943704
 PrefabInstance:
   m_ObjectHideFlags: 0

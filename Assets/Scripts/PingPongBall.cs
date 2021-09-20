@@ -29,6 +29,8 @@ namespace RunnerGame
                     GameManager.Instance.gameOver = true;
                     GameManager.Instance.OpenWinPanel();
                 }
+
+                gameObject.SetActive(false);
             }
         }
     }

@@ -27,6 +27,7 @@ namespace RunnerGame
             yield return new WaitForSeconds(1f);
             yield return _pingpong.transform.DOJump(transform.position, 2f, 0, 1f).WaitForCompletion();
             _pingpong.transform.position = startPos;
+            _pingpong.SetActive(false);
         }
     }
 }
