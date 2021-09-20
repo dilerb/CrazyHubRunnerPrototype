@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 namespace RunnerGame
 {
@@ -12,9 +13,11 @@ namespace RunnerGame
         [SerializeField] private GameObject _debugMenuPanel;
 
         private PlayerMovement _playerMovement;
+        private CameraFollow _cameraFollow;
 
         void Start()
         {
+            _cameraFollow = _cam.GetComponent<CameraFollow>();
             _playerMovement = _player.GetComponent<PlayerMovement>();
         }
 
@@ -61,6 +64,27 @@ namespace RunnerGame
         public void DownTurnCamera()
         {
             _cam.transform.Rotate(Vector3.right);
+        }
+
+        public void LeftMoveCamera()
+        {
+            _cam.transform.position += Vector3.left;
+            _cameraFollow.ChangeOffset(_cam.transform.position);
+        }
+        public void RightMoveCamera()
+        {
+            _cam.transform.position += Vector3.right;
+            _cameraFollow.ChangeOffset(_cam.transform.position);
+        }
+        public void UpMoveCamera()
+        {
+            _cam.transform.position += Vector3.up;
+            _cameraFollow.ChangeOffset(_cam.transform.position);
+        }
+        public void DownMoveCamera()
+        {
+            _cam.transform.position += Vector3.down;
+            _cameraFollow.ChangeOffset(_cam.transform.position);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace RunnerGame
         [SerializeField] private float _strafeSpeed = 5f;
         [SerializeField] private float _clampPositionX = 5f;
 
-        private bool drive = false;
+        private bool _drive = true;
         private float _swipeSpeed = 0f;
         private float _nextSpeed = 0f;
         internal bool _reverseControl = false;
@@ -33,7 +33,7 @@ namespace RunnerGame
             MoveForward();
             //Rotate();
 
-            //if (!drive)
+            //if (!_drive)
             //    return;
 
             Swipe();
@@ -67,11 +67,11 @@ namespace RunnerGame
         private void LeanTouch_OnFingerUp(LeanFinger obj)
         {
             _nextSpeed = 0f;
-            drive = false;
+            _drive = false;
         }
         private void LeanTouch_OnFingerDown(LeanFinger obj)
         {
-            drive = true;
+            _drive = true;
         }
         private void LeanTouch_OnFingerUpdate(LeanFinger obj)
         {

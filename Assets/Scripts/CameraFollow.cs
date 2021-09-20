@@ -40,5 +40,10 @@ namespace RunnerGame
                 }
             }
         }
+
+        public void ChangeOffset(Vector3 newPos)
+        {
+            _offset = newPos - _target.position;
+        }
     }
 }

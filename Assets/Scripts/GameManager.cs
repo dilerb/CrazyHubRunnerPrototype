@@ -18,10 +18,13 @@ namespace RunnerGame
         [SerializeField] private GameObject endParticles;
         [SerializeField] private GameObject inGamePanel;
         [SerializeField] private GameObject joyStickPanel;
+        [SerializeField] private Text _scoreText;
 
         public bool gameOver;
         public int currentLevel;
         public GameObject player;
+        private int _score;
+
         private void Awake()
         {
             if (Instance == null)
@@ -36,6 +39,7 @@ namespace RunnerGame
         }
         private void Start()
         {
+            _score = int.Parse(_scoreText.text);
             currentLevel = GetLevel();
             SetLevel();
             StartGame();
@@ -78,6 +82,11 @@ namespace RunnerGame
             endParticles.SetActive(true);
             winPanel.SetActive(true);
             joyStickPanel.SetActive(false);
+        }
+        public void IncreaseScore(int s)
+        {
+            _score += s;
+            _scoreText.text = _score.ToString();
         }
         private void OnApplicationPause(bool pauseStatus)
         {
